@@ -1,7 +1,9 @@
  lektor theme landed
 =====================
 
-For Installation Instructions please have a look at [getlektor.com/docs/themes/installing](https://www.getlektor.com/docs/themes/installing/).
+For general Installation Instructions please have a look at [getlektor.com/docs/themes/installing](https://www.getlektor.com/docs/themes/installing/).
+
+To use this theme properly please modify and copy the file ``example_settings.ini`` into ``databags/settings.ini`` in the databags folder of your project! 
 
 
  Inspiration

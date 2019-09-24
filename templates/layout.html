@@ -1,7 +1,10 @@
-{%- from "macros/translator.j2" import translator %}
+{%- from "macros/translator.j2" import translator -%}
 <!DOCTYPE html>
-<html{% if alt %} lang="{{ alt }}"{% endif %}>
-{% include "partials/head.html" %}
+<html
+  {%- if alt %} lang="{{ alt }}"
+  {%- endif %}>
+{% include "partials/head.html" -%}
+
   <body class="{% if this._path == '/' %}landing {% endif %} is-preload">
     <div id="page-wrapper">
       <!-- Header -->
