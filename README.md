@@ -21,7 +21,8 @@ mkdir themes
 rm -r templates models flowblocks assets
 
 # add this template as gitmodule
-git submodule add https://github.com/chaos-bodensee/lektor-theme-landed.git templates/lektor-theme-landed
+git submodule add https://github.com/chaos-bodensee/lektor-theme-landed.git \
+  templates/lektor-theme-landed
 
 # copy the template settings
 mkdir databags
