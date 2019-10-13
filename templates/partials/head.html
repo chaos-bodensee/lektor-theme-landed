@@ -33,8 +33,8 @@
       {%- else %}"{{ '/css/ie9.min.css'|asseturl }}"
       {%- endif %} /><![endif]-->
 {%- block expand_description %}
-    <meta name="description" content=
-  {{- translator('description', 'translate', this.alt) }} />
+    <meta name="description" content="
+  {{- translator('description', 'translate', this.alt) }}" />
 {%- endblock %}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/icons/apple-touch-icon.png'|asseturl }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/icons/favicon-32x32.png'|asseturl }}">
