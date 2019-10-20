@@ -98,7 +98,7 @@ input[type="button"],
     opacity: 0.25;
   }
 
-  &.tb-opened {
+  &.space-opened {
     background-color: LimeGreen !important;
 
     &.navbar {
@@ -107,7 +107,7 @@ input[type="button"],
   }
 }
 
-.tb-closed {
+.space-closed {
   color: #d23128ff;
 }
 

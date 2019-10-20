@@ -137,11 +137,11 @@ window.setInterval(function () {
     $.getJSON("/toolboxbodenseeev.json", function (data) {
         $("link[href='/css/spacestatus.css']").remove();
         if (data.state.open == true) {
-            $('#tb-closed').hide();
-            $('#tb-opened').css("display", "block");
+            $('#space-closed').hide();
+            $('#space-opened').css("display", "block");
         } else {
-            $('#tb-opened').hide();
-            $('#tb-closed').show();
+            $('#space-opened').hide();
+            $('#space-closed').show();
         }
     });
 }, 5000);
