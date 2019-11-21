@@ -1,9 +1,21 @@
 {%- extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {%- block expand_header %}
-    <link rel="stylesheet" href="{{ '/css/leaflet.css'|asseturl }}" />
-    <script src="{{ '/js/leaflet.min.js'|asseturl }}"></script>
-    <link href="{{ '/css/lightgallery.css'|asseturl }}" rel="stylesheet">
+    {% if '/css/leaflet.min.css'|asseturl == empty %}
+        <link rel="stylesheet" href="{{ '/css/leaflet.css'|asseturl }}" />
+    {% else -%}
+        <link rel="stylesheet" href="{{ '/css/leaflet.min.css'|asseturl }}" />
+    {% endif -%}
+    {% if '/js/leaflet.min.js'|asseturl == empty %}
+        <script src="{{ '/js/leaflet.js'|asseturl }}"></script>
+    {% else -%}
+        <script src="{{ '/js/leaflet.min.js'|asseturl }}"></script>
+    {% endif -%}
+    {% if '/css/lightgallery.min.css'|asseturl == empty %}
+        <link href="{{ '/css/lightgallery.css'|asseturl }}" rel="stylesheet">
+    {% else -%}
+        <link href="{{ '/css/lightgallery.min.css'|asseturl }}" rel="stylesheet">
+    {% endif -%}
 {%- endblock %}
 
 {%- block expand_description %}
@@ -46,8 +58,24 @@
       $('.lightgallery').lightGallery();
     });
   </script>
-  <script src="{{ '/js/openstreetmap.min.js'|asseturl }}"></script>
-  <script src="{{ '/js/picturefill.min.js'|asseturl }}"></script>
-  <script src="{{ '/js/lightgallery-all.min.js'|asseturl }}"></script>
-  <script src="{{ '/js/jquery.mousewheel.min.js'|asseturl }}"></script>
+  {% if '/js/openstreetmap.min.js'|asseturl == empty %}
+    <script src="{{ '/js/openstreetmap.js'|asseturl }}"></script>
+  {% else -%}
+    <script src="{{ '/js/openstreetmap.min.js'|asseturl }}"></script>
+  {% endif %}
+  {% if '/js/picturefill.min.js'|asseturl == empty %}
+    <script src="{{ '/js/picturefill.js'|asseturl }}"></script>
+  {% else -%}
+    <script src="{{ '/js/picturefill.min.js'|asseturl }}"></script>
+  {% endif %}
+  {% if '/js/lightgallery-all.min.js'|asseturl == empty %}
+    <script src="{{ '/js/lightgallery-all.js'|asseturl }}"></script>
+  {% else -%}
+    <script src="{{ '/js/lightgallery-all.min.js'|asseturl }}"></script>
+  {% endif %}
+  {% if '/js/jquery.mousewheel.min.js'|asseturl == empty %}
+    <script src="{{ '/js/jquery.mousewheel.js'|asseturl }}"></script>
+  {% else -%}
+    <script src="{{ '/js/jquery.mousewheel.min.js'|asseturl }}"></script>
+  {% endif %}
 {%- endblock %}
