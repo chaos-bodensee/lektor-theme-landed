@@ -58,46 +58,39 @@
 {%- endfor %}
 
 {#-
- # the language selection is currently not included into the template above, because we did not find a proper solution to integrate them yet
- #}
- {%- set newPath = this._path %}
- {#- append a / wenn needed so there is no http redirect involved when visiting subpages #}
- {%- if not newPath.endswith('/') %}
-   {%- set newPath = newPath + '/' %}
- {%- endif %}
-            <li class="last">
-              <a href="/
-              {{- translator('default_path', 'navigation', this.alt, 'en') -}}
-              {{ newPath }}">
-              {{- translator('sprache', 'navigation', this.alt) -}}
-              </a>
-              <ul class="last">
-                <li>
-                  <a href="{{ newPath }}">
-                    {{- translator('German', 'navigation', this.alt) -}}
-                  </a>
-                </li>
-                <li>
-                  <a href="/sxu{{ newPath }}">
-                    {{- translator('Saechsisch', 'navigation', this.alt) }}
-                    <i>(
-                      {{- translator('falls', 'navigation', this.alt) -}}
-                    )</i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/en{{ newPath}}">
-                    {{- translator('Englisch', 'navigation', this.alt) }}
-                    <i>(
-                      {{- translator('falls', 'navigation', this.alt) -}}
-                    )</i>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  # the language selection is currently not included into the template above, because we did not find a proper solution to integrate them yet
+  #}
+             <li class="last">
+               <a href="{{ '.'|url(alt=translator('default_path', 'navigation', this.alt, 'en')) }}">
+               {{- translator('sprache', 'navigation', this.alt) -}}
+               </a>
+               <ul class="last">
+                 <li>
+                   <a href="{{ '.'|url(alt='') }}">
+                     {{- translator('German', 'navigation', this.alt) -}}
+                   </a>
+                 </li>
+                 <li>
+                   <a href="{{ '.'|url(alt='sxu') }}">
+                     {{- translator('Saechsisch', 'navigation', this.alt) }}
+                     <i>(
+                       {{- translator('falls', 'navigation', this.alt) -}}
+                     )</i>
+                   </a>
+                 </li>
+                 <li>
+                   <a href="{{ '.'|url(alt='en') }}">
+                     {{- translator('Englisch', 'navigation', this.alt) }}
+                     <i>(
+                       {{- translator('falls', 'navigation', this.alt) -}}
+                     )</i>
+                   </a>
+                 </li>
+               </ul>
+             </li>
+           </ul>
+         </nav>
+       </header>
       <!-- Main -->
       {%- block body %}
       {%- endblock %}
