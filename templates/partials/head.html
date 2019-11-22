@@ -47,6 +47,10 @@
     <meta name="theme-color" content="#e64f2d">
 {%- block expand_header %}
 {%- endblock %}
+    {%- if '/js/jquery.min.js'|asseturl == empty %}
+    <script src="{{ '/js/jquery.js'|asseturl }}"></script>
+    {%- else %}
     <script src="{{ '/js/jquery.min.js'|asseturl }}"></script>
+    {% endif %}
   </head>
  
