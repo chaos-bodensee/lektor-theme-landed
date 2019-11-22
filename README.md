@@ -53,3 +53,25 @@ nano *.lektorproject
 ------------------
 Design Inspired by [html5up.net/landed](https://html5up.net/landed)<br/>
 Landed Design created by [AJ](http://twitter.com/ajlkn) under the [LICENSE](https://html5up.net/license) [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+
+
+ Licence
+-----------
+```
+Copyright (C) 2019 Max Bachmann
+Copyright (C) 2019 L3D <l3d@c3woc.de>
+Copyright (C) 2019 Toolbox Bodensee e.V. <kontakt@toolbox-bodensee.de>
+Copyright (C) 2019 Chaos Bodensee
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+https://github.com/chaos-bodensee/lektor-theme-landed/blob/master/LICENCE
+```
